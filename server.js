@@ -74,6 +74,15 @@ const authMiddleware = (req, res, next) => {
 };
 
 // Routes
+// Get user profile
+app.get('/', async (req, res) => {
+  try {
+   
+    res.json({"status":200});
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
 // Register
 app.post('/api/register', async (req, res) => {
